@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro con Web Worker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #timer {
+            font-size: 3rem;
+            margin: 20px 0;
+        }
+        button {
+            font-size: 1.2rem;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Temporizador Pomodoro</h1>
+    <div id="timer">
+        <span id="mins">25</span>:<span id="secs">00</span>
+    </div>
+    <button id="startbutton">Iniciar</button>
+    <button id="pausebutton" disabled>Pausar</button>
+    <audio id="alarm-sound" src="./oye_como_va.mp3" controls>carlos santana</audio>
+
+    <script src="timer.js"></script>
+</body>
+</html>
