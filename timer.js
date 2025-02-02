@@ -6,8 +6,6 @@ const alarma = document.getElementById("alarm-sound");
 
 let worker;
 
-
-
 // Función para iniciar el temporizador
 function startTimer() {
     let minutos = parseInt(mins.textContent);
@@ -24,13 +22,27 @@ function startTimer() {
             console.log("¡Tiempo terminado!");
             console.log(Date())
             worker.terminate();
+            alarma.hidden=false
+            alarma.focus()
+            alarma.onfocus
             alarma.play();
         } else {
             let min = Math.floor(e.data.timeLeft / 60);
             let sec = e.data.timeLeft % 60;
             mins.textContent = min.toString().padStart(2, "0");
             secs.textContent = sec.toString().padStart(2, "0");
-
+            if(min==20 && sec==0){
+                console.log(min.toString().padStart(2, "0"), sec.toString().padStart(2, "0"))
+            }
+            if(min==10 && sec ==0){
+                console.log(min.toString().padStart(2, "0"), sec.toString().padStart(2, "0"))
+            }
+            if(min==5 && sec==0){
+                console.log(min.toString().padStart(2, "0"), sec.toString().padStart(2, "0"))
+            }
+            if(min==1 && sec==0){
+                console.log(min.toString().padStart(2, "0"), sec.toString().padStart(2, "0"))
+            }
              // Reproducir sonido cuando llega a 00:00
     };
 
@@ -38,7 +50,6 @@ function startTimer() {
     pauseBtn.disabled = false;
 }
 }
-
 
 // Función para pausar el temporizador
 function pauseTimer() {
